@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springBootSecurityApp
+Implementation-Version: 1.0
+Built-By: Ali
+Implementation-Vendor-Id: com.appstude
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/appstude.app
+ /
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

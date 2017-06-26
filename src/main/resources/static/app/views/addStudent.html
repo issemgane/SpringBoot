@@ -1,0 +1,63 @@
+ <div class="caption-full">
+			 <div ng-if="exception.message" class="alert alert-danger">
+			  <strong>Error : </strong> {{exception.message}}
+			</div>
+        	<div class="panel panel-info">
+	                  <div class="panel-heading">
+	                        <div class="panel-title">Sign In</div>
+	                  </div>     
+                    
+                      <div class="panel-body" >
+                          <div ng-if="mode.value=='form'">     
+	                           <form id="loginform">    
+		                             <div class="form-group">
+		                                  <label class="control-label">Nom: </label>
+		                                   <input  type="text" class="form-control"  ng-model="student.nom" placeholder="Nom..." />
+		                                   <span ng-if="errors" class="error" >{{errors.nom}}</span>                                        
+		                             </div>
+		                             
+		                             <div class="form-group">
+		                                  <label class="control-label">Pr�nom : </label>
+		                                   <input  type="text" class="form-control"  ng-model="student.prenom" placeholder="Prénom..." />
+		                                   <span ng-if="errors" class="error" >{{errors.prenom}}</span>                                        
+		                             </div>
+		                             
+		                             <div class="form-group">
+		                                  <label class="control-label">Date Naissance : </label>
+		                                   <input  type="date" class="form-control"  ng-model="student.dateNaissance"  />
+		                                   <span ng-if="errors" class="error" >{{errors.dateNaissance}}</span>                                     
+		                             </div>
+		                             
+		                             
+		                             <div>
+		                             	<button class="btn btn-primary" ng-click="saveStudent()">Save</button>
+		                             </div> 
+	                            </form>     
+							</div>
+							<div ng-if="mode.value=='confirm'">
+								<div>Registration Succeeded</div>
+							
+							     <div class="form-group">
+									 <label class="control-label">ID : </label>
+									 <label class="control-label">{{student.id}}</label>
+								 </div>
+								 
+								 <div class="form-group">
+									 <label class="control-label">Nom : </label>
+									 <label class="control-label">{{student.nom}}</label>
+								 </div>
+								 
+								 <div class="form-group">
+									 <label class="control-label">Prénom : </label>
+									 <label class="control-label">{{student.prenom}}</label>
+								 </div>
+								 
+								 <div class="form-group">
+									 <label class="control-label">Date Naissance</label>
+									 <label class="control-label">{{student.dateNaissance | date :'yyyy-MM-dd'}}</label>
+								 </div>
+							</div>
+                        </div>                     
+             </div>  
+                           
+</div>
